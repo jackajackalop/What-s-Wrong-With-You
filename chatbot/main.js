@@ -36,16 +36,6 @@ function preload(){
 	rleg = loadImage('\\rleg.png');
 	tail = loadImage('\\tail.png');
 	cwing = loadImage('\\cwing.png');
-//	head = loadImage('https://imgur.com/YqVXYIe.png');
-	// body = loadImage('https://imgur.com/o1opZGy.png');
-	// bbeak = loadImage('https://imgur.com/52fswKc.png');
-	// tbeak = loadImage('https://imgur.com/y6Nn04e.png');
-	// lfoot = loadImage('https://imgur.com/b6L5Qij.png');
-	// rfoot = loadImage('https://imgur.com/VoaAZd2.png');
-	// lleg = loadImage('https://imgur.com/aI2vbQD.png');
-	// rleg = loadImage('https://imgur.com/JbFN78t.png');
-	// tail = loadImage('https://imgur.com/abrHR4s.png');
-	// cwing = loadImage('https://imgur.com/m1hl4Id.png');
 	var c1 = "artless\nbawdy\nbeslubbering\nbootless\nchurlish\ncockered\nclouted\ncraven\ncurrish\ndankish\ndissembling\ndroning\nerrant\nfawning\nfobbing\nfroward\nfrothy\ngleeking\ngoatish\ngorbellied\nimpertinent\ninfectious\njarring\nloggerheaded\nlumpish\nmammering\nmangled\nmewling\npaunchy\npribbling\npuking\npuny\nqualling\nrank\nreeky\nroguish\nruttish\nsaucy\nspleeny\nspongy\nsurly\ntottering\nunmuzzled\nvain\nvenomed\nvillainous\nwarped\nwayward\nweedy\nyeasty\n";
 	var c2 = "base-court\nbat-fowling\nbeef-witted\nbeetle-headed\nboil-brained\nclapper-clawed\nclay-brained\ncommon-kissing\ncrook-pated\ndismal-dreaming\ndizzy-eyed\ndoghearted\ndread-bolted\nearth-vexing\nelf-skinned\nfat-kidneyed\nfen-sucked\nflap-mouthed\nfly-bitten\nfolly-fallen\nfool-born\nfull-gorged\nguts-griping\nhalf-faced\nhasty-witted\nhedge-born\nhell-hated\nidle-headed\nill-breeding\nill-nurtured\nknotty-pated\nmilk-livered\nmotley-minded\nonion-eyed\nplume-plucked\npottle-deep\npox-marked\nreeling-ripe\nrough-hewn\nrude-growing\nrump-fed\nshard-borne\nsheep-biting\nspur-galled\nswag-bellied\ntardy-gaited\ntickle-brained\ntoad-spotted\nunchin-snouted\nweather-bitten\n";
 	var c3 = "apple-john\nbaggage\nbarnacle\nbladder\nboar-pig\nbugbear\nbum-bailey\ncanker-blossom\nclack-dish\nclotpole\ncoxcomb\ncodpiece\ndeath-token\ndewberry\nflap-dragon\nflax-wench\nflirt-gill\nfoot-licker\nfustilarian\ngiglet\ngudgeon\nhaggard\nharpy\nhedge-pig\nhorn-beast\nhugger-mugger\njoithead\nlewdster\nlout\nmaggot-pie\nmalt-worm\nmammet\nmeasle\nminnow\nmiscreant\nmoldwarp\nmumble-news\nnut-hook\npigeon-egg\npignut\nputtock\npumpion\nratsbane\nscut\nskainsmate\nstrumpet\nvarlot\nvassal\nwhey-face\nwagtail";
