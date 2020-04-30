@@ -25,17 +25,17 @@ var column1, column2, column3;
 var crayon;
 
 function preload(){
-	crayon = loadFont('http://localhost:8000/chatbot/DK_Cool_Crayon.ttf');
-	head = loadImage('\\head.png');
-	body = loadImage('\\body.png');
-	bbeak = loadImage('\\bbeak.png');
-	tbeak = loadImage('\\tbeak.png');
-	lfoot = loadImage('\\lfoot.png');
-	rfoot = loadImage('\\rfoot.png');
-	lleg = loadImage('\\lleg.png');
-	rleg = loadImage('\\rleg.png');
-	tail = loadImage('\\tail.png');
-	cwing = loadImage('\\cwing.png');
+	//crayon = loadFont('http://localhost:8000/chatbot/DK_Cool_Crayon.ttf');
+	head = loadImage('chatbot/head.png');
+	body = loadImage('chatbot/body.png');
+	bbeak = loadImage('chatbot/bottom-beak.png');
+	tbeak = loadImage('chatbot/top-beak.png');
+	lfoot = loadImage('chatbot/left-foot.png');
+	rfoot = loadImage('chatbot/right-foot.png');
+	lleg = loadImage('chatbot/left-leg.png');
+	rleg = loadImage('chatbot/right-leg.png');
+	tail = loadImage('chatbot/tail.png');
+	cwing = loadImage('chatbot/closed-wing.png');
 	var c1 = "artless\nbawdy\nbeslubbering\nbootless\nchurlish\ncockered\nclouted\ncraven\ncurrish\ndankish\ndissembling\ndroning\nerrant\nfawning\nfobbing\nfroward\nfrothy\ngleeking\ngoatish\ngorbellied\nimpertinent\ninfectious\njarring\nloggerheaded\nlumpish\nmammering\nmangled\nmewling\npaunchy\npribbling\npuking\npuny\nqualling\nrank\nreeky\nroguish\nruttish\nsaucy\nspleeny\nspongy\nsurly\ntottering\nunmuzzled\nvain\nvenomed\nvillainous\nwarped\nwayward\nweedy\nyeasty\n";
 	var c2 = "base-court\nbat-fowling\nbeef-witted\nbeetle-headed\nboil-brained\nclapper-clawed\nclay-brained\ncommon-kissing\ncrook-pated\ndismal-dreaming\ndizzy-eyed\ndoghearted\ndread-bolted\nearth-vexing\nelf-skinned\nfat-kidneyed\nfen-sucked\nflap-mouthed\nfly-bitten\nfolly-fallen\nfool-born\nfull-gorged\nguts-griping\nhalf-faced\nhasty-witted\nhedge-born\nhell-hated\nidle-headed\nill-breeding\nill-nurtured\nknotty-pated\nmilk-livered\nmotley-minded\nonion-eyed\nplume-plucked\npottle-deep\npox-marked\nreeling-ripe\nrough-hewn\nrude-growing\nrump-fed\nshard-borne\nsheep-biting\nspur-galled\nswag-bellied\ntardy-gaited\ntickle-brained\ntoad-spotted\nunchin-snouted\nweather-bitten\n";
 	var c3 = "apple-john\nbaggage\nbarnacle\nbladder\nboar-pig\nbugbear\nbum-bailey\ncanker-blossom\nclack-dish\nclotpole\ncoxcomb\ncodpiece\ndeath-token\ndewberry\nflap-dragon\nflax-wench\nflirt-gill\nfoot-licker\nfustilarian\ngiglet\ngudgeon\nhaggard\nharpy\nhedge-pig\nhorn-beast\nhugger-mugger\njoithead\nlewdster\nlout\nmaggot-pie\nmalt-worm\nmammet\nmeasle\nminnow\nmiscreant\nmoldwarp\nmumble-news\nnut-hook\npigeon-egg\npignut\nputtock\npumpion\nratsbane\nscut\nskainsmate\nstrumpet\nvarlot\nvassal\nwhey-face\nwagtail";
@@ -45,7 +45,7 @@ function preload(){
 }
 
 function setup() {
-	createCanvas(1400, 600); 	
+	createCanvas(1400, 600);
 	mostRecentConfidence = 0;
 	mostRecentSpokenWord = "";
 	newCurse();
@@ -55,10 +55,10 @@ function setup() {
 	wait = true;
 	affirmed = true;
 	timeStart = 0;
-	initializeMySpeechRecognizer(); 
+	initializeMySpeechRecognizer();
 }
 function keyPressed(){
- 
+
 	if (key === ' '){
 		// Press the spacebar to reset the speech recognizer.
 		// This is helpful in case it freezes up for some reason.
@@ -68,7 +68,7 @@ function keyPressed(){
 }
 
 function initializeMySpeechRecognizer(){
-	mySpeechRecognizer = new p5.SpeechRec('en-US'); 
+	mySpeechRecognizer = new p5.SpeechRec('en-US');
 
 	// These are important settings to experiment with
 	mySpeechRecognizer.continuous = true;   // Do continuous recognition
@@ -326,7 +326,7 @@ function askQuestion(){
 	}
 }
 
-function respond(){ 
+function respond(){
 	textSize(22);
 	// textFont(crayon);
 	textLeading(40);
@@ -339,7 +339,7 @@ function respond(){
 		}
 	}else if(step==1){
 		if(!answer){
-			text('Nice! Gordon Ramsay would be \n'+curse+' proud \nof u lol', tx,ty);	
+			text('Nice! Gordon Ramsay would be \n'+curse+' proud \nof u lol', tx,ty);
 		}else{
 			text('You can ask one of your friends to help.\nThey\'re probably just bumming around \nplaying '+curse+' \nfucking Touhou or some shit anyways', tx,ty);
 		}
@@ -347,19 +347,19 @@ function respond(){
 		text('Some '+curse+' \neasy to cook things you like:\n-spam and rice\n-tamago kake gohan\n-scrambled eggs\n-pesto pasta\n-tomato egg noodles\n-fried egg', tx,ty);
 	}else if(step==2){
 		if(answer){
-			text('Ayyyy good job for supporting the \n'+curse+' fucking\nfantastic field of modern medicine', tx,ty);	
+			text('Ayyyy good job for supporting the \n'+curse+' fucking\nfantastic field of modern medicine', tx,ty);
 		}else{
 			text('Do it now you bum omg.\n They were prescribed to you for a \n'+curse+' reason. \nIts not your fault but you \ngotta do what you gotta do', tx,ty);
 		}
 	}else if(step==4){
 		if(answer){
-			text('Nice nice nice living that optimal college \nstudent lifestyle', tx,ty);	
+			text('Nice nice nice living that optimal college \nstudent lifestyle', tx,ty);
 		}else{
 			text('Napping is the \n'+curse+' best. \nMost things will make you less sad \nafter a nap tbh', tx,ty);
 		}
 	}else if(step==5){
 		if(answer){
-			text('Clean up a bit so even if you feel like \na mess at least you wont look like one', tx,ty);	
+			text('Clean up a bit so even if you feel like \na mess at least you wont look like one', tx,ty);
 		}else{
 			text('Arent you an orderly \n'+curse+' potato angel', tx,ty);
 		}
@@ -367,23 +367,23 @@ function respond(){
 		text('Even if your world is falling apart, there \nare things you can control:\n-shower\n-brush teeth\n-the dishes in the sink\n-the crumbs on the floor\n-the cluttered table\n-the kitchen counter', tx,ty);
 	}else if(step==6){
 		if(answer){
-			text('Find an Eric to hang onto or something. \nOr another friend. \nYou have '+curse+' \nhecking lovely friends who want\nto be there for you', tx,ty);	
+			text('Find an Eric to hang onto or something. \nOr another friend. \nYou have '+curse+' \nhecking lovely friends who want\nto be there for you', tx,ty);
 		}else{
 			text('Cool! Strong!! Independent!!!', tx,ty);
 		}
 	}else if(step==1002){
 		text('Even without friends, plenty of \n'+curse+' people \ncare about you dumbass. Consider: \n-your parents\n-a fav professor\n-academic advisor probably\n-CAPS\n-anonymous shit you of all \n people should know about since you \n volunteered for one like 7cups.com', tx,ty);
 	}else if(step==1003){
-		text('Nice. Now u can thirst after booty or \nsomething instead of fluids.', tx,ty);	
+		text('Nice. Now u can thirst after booty or \nsomething instead of fluids.', tx,ty);
 	}else if(step==7){
 		if(answer){
-			text('r e e v a l u a t e your \n'+curse+' life\nIs there something you can \n'+curse+' do???\nthen do it for fucks sake. \nIf not, then all you can do is get over it.\nTalk to someone about it. ', tx,ty);	
+			text('r e e v a l u a t e your \n'+curse+' life\nIs there something you can \n'+curse+' do???\nthen do it for fucks sake. \nIf not, then all you can do is get over it.\nTalk to someone about it. ', tx,ty);
 		}else{
 			text('Calm and steady like a parkour persons \nthighs at the start of practice', tx,ty);
 		}
 	}else if(step==8){
 		if(answer){
-			text('TBH i feel you should go see someone \nabout this but try: \n-deep, calm, breaths\n-stretch routine\n-exercise\n-make some tea\n-nice long walk outside\n-shower!!', tx,ty);	
+			text('TBH i feel you should go see someone \nabout this but try: \n-deep, calm, breaths\n-stretch routine\n-exercise\n-make some tea\n-nice long walk outside\n-shower!!', tx,ty);
 		}else{
 			text('Okay thats good.', tx,ty);
 		}
